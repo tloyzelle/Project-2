@@ -28,7 +28,7 @@ dog_item.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'cat_item',
+      modelName: 'dog_item',
     }
   );
   
