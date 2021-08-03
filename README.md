@@ -1,4 +1,4 @@
-# CatDog Market
+# Coopers' Toybox
 
 ## Description
 An open marketplace to buy and sell items for your furry friends.
