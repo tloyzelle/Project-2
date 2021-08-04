@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class cat_item extends Model {}
+class wishlist extends Model {}
 
-cat_item.init(
+wishlist.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -20,21 +20,31 @@ cat_item.init(
         allowNull: false,
       },
       price: {
+          type: DataTypes.INTEGER,
+          allowNull: false
+      },
+      catItem_id: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        references: {
+          model: 'cat_item',
+          key: 'id',
+        },
       },
-      filename: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },  
+      dogItem_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'dog_item',
+          key: 'id',
+        },
       },
+    },
     {
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'cat_item',
+      modelName: 'wishlist',
     }
-  );
+);
   
-  module.exports = cat_item;
+  module.exports = wishlist;
   
