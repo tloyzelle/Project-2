@@ -20,9 +20,13 @@ cat_item.init(
         allowNull: false,
       },
       price: {
-          type: DataTypes.INTEGER,
-          allowNull: false
-      }
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      filename: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },  
       },
     {
       sequelize,
