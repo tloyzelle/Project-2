@@ -2,21 +2,25 @@
     {
         "title":"Chew Toy",
         "description":"Cozie Marvin the Moose Plush Dog Toy",
-        "price": 4.69
+        "price": 4.69,
+        "filename": "01-DogData.jpg"
     },
     {
         "title":"Chew Toy",
         "description":"Benebone Peanut Butter Flavor Wishbone Tough Dog Chew Toy",
-        "price": 10.99
+        "price": 11.59,
+        "filename": "02-DogData.jpg"
     },
     {
         "title":"Dog Food",
         "description":"Bundle: Purina Pro Plan Puppy Lamb & Rice Formula Dry Dog Food + Nylabone Teething Pacifier Chew Toy",
-        "price": 59.47
+        "price": 59.47,
+        "filename": "03-DogData.jpg"
     },
     {
         "title":"Dog Appearel",
         "description":"Frisco Neoprene Dog Life Jacket",
-        "price": 30.39
+        "price": 30.39,
+        "filename": "04-DogData.jpg"
     }
 ]
