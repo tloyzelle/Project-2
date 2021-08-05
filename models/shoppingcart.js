@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class shoppingCart extends Model {}
+class ShoppingCart extends Model {}
 
-shoppingCart.init(
+ShoppingCart.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -46,5 +46,5 @@ shoppingCart.init(
     }
   );
   
-  module.exports = shoppingCart;
+  module.exports = ShoppingCart;
   

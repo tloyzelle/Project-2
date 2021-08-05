@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class wishlist extends Model {}
+class Wishlist extends Model {}
 
-wishlist.init(
+Wishlist.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -46,5 +46,5 @@ wishlist.init(
     }
 );
   
-  module.exports = wishlist;
+  module.exports = Wishlist;
   
