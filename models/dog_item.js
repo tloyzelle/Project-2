@@ -30,6 +30,7 @@ Dog_item.init(
       },
     {
       sequelize,
+      timestamps: false,
       freezeTableName: true,
       underscored: true,
       modelName: 'dog_item',
