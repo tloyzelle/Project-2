@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, cat_item, dog_item} = require('../models');
 // const withAuth = require('../utils/auth');
 
 
+
+// get all users
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -29,5 +31,34 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+
+// GET one cat item
+router.get('/catitem/:id', async (req, res) => {
+  try {
+    const catData = await cat_item.findByPk(req.params.id);
+
+    const catitem = catData.get({ plain: true });
+    res.render('catItems', { catitem});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/dogitem/:id', async (req, res) => {
+  try {
+    const dogData = await dog_item.findByPk(req.params.id);
+
+    const dogitem = dogData.get({ plain: true });
+    res.render('dogItems', { dogitem, });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+
 
 module.exports = router;
