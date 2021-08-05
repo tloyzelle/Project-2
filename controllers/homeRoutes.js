@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, cat_item, dog_item} = require('../models');
+const { User, Cat_item, Dog_item} = require('../models');
 // const withAuth = require('../utils/auth');
 
 
@@ -36,7 +36,7 @@ router.get('/login', (req, res) => {
 // GET one cat item
 router.get('/catitem/:id', async (req, res) => {
   try {
-    const catData = await cat_item.findByPk(req.params.id);
+    const catData = await Cat_item.findByPk(req.params.id);
 
     const catitem = catData.get({ plain: true });
     res.render('catItems', { catitem});
@@ -48,7 +48,7 @@ router.get('/catitem/:id', async (req, res) => {
 
 router.get('/dogitem/:id', async (req, res) => {
   try {
-    const dogData = await dog_item.findByPk(req.params.id);
+    const dogData = await Dog_item.findByPk(req.params.id);
 
     const dogitem = dogData.get({ plain: true });
     res.render('dogItems', { dogitem, });
