@@ -2,6 +2,17 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
+router.get('/', async (req, res) => {
+  const userData = await User.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const users = userData.map((User) => User.get({ plain: true }));
+      res.json(users);
+    });
+
+
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
