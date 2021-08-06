@@ -1,4 +1,4 @@
-<section class="">
+{{!-- <section class="">
     <img src="/public/images/{{cat_item.filename}}" alt="{{cat_item.description}}">
     <div class="catItem-title">
         <p>Item: {{cat_item.title}}</p>
@@ -9,4 +9,23 @@
     <div class="dogItem-price">
         <p>$ {{cat_item.price}}</p>
     </div>
-</section>
+</section> --}}
+
+
+{{!-- Render Card Item --}}
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+        <img src="/images/{{catitem.filename}}" alt="{{catitem.description}}">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content catItem-details">
+                <p class="title is-4">Item: {{catitem.title}}</p>
+                <p class="subtitle is-6">Description: {{catitem.description}}</p>
+                <p class="subtitle is-6">$ {{catitem.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>
