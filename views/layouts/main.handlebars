@@ -5,36 +5,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cooper and Dan's Toybox</title>
-  <link rel="stylesheet" href="/css/style.css">
+  {{!-- Link To Bulma --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  {{!-- Link to Google Fonts --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  {{!-- Link to CSS --}}
+  <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      Cooper and Dan's Toybox
-    </h1>
-    {{#if logged_in}}
-      <nav>
-        <button class="btn" id="logout">logout</button>
+      {{!-- Nav Bar --}}
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="">
+            <img src="images/logo_1.jpg" width="auto" height="auto">
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Products
+            </a>
+
+            <a class="navbar-item">
+              Product 2
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-light">
+                  <strong>Shopping Cart</strong>
+                </a>
+                <!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+              <a href="/homepage">Homepage</a> |
+              <button class="no-button" id="logout">logout</button>
+              {{else}}
+              <a class="button is-primary" href="/login"><strong>Login</strong> </a>
+              {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
-    {{/if}}
-    <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-      </nav>
+
+    {{!-- Hero Image --}}
+    <section class="hero is-info is-medium">
+      <div class="hero-body">
+        <p class="title has-text-centered">
+          Cooper and Dan's Toybox
+        </p>
+        <p class="subtitle has-text-centered">
+          Subtitle
+        </p>
+      </div>
+    </section>
+
   </header>
       
-  <main class="container container-fluid mt-5">
+  <main class="container container-fluid">
     {{{ body }}}
+
+    {{!-- Render Column of Cards --}}
+    <div class="columns card-container">
+      {{!-- Render One Card Item --}}
+      <div class="card column is-one-fifth">
+        <div class="card-image">
+            <figure class="image is-4by3">
+            <img src="/public//images/{{dog_item.filename}}" alt="{{dog_item.description}}">
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="media">
+              <div class="media-content dogItem-details">
+                  <p class="title is-4">Item: {{dog_item.title}}</p>
+                  <p class="subtitle is-6">Description: {{dog_item.description}}</p>
+                  <p class="subtitle is-6">$ {{dog_item.price}}</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      {{!-- CARD ITEM TWO EXAMPLE --}}
+      {{!-- <div class="card column is-one-fifth">
+        <div class="card-image">
+            <figure class="image is-4by3">
+            <img src="/public//images/{{dog_item.filename}}" alt="{{dog_item.description}}">
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="media">
+              <div class="media-content dogItem-details">
+                  <p class="title is-4">Item: {{dog_item.title}}</p>
+                  <p class="subtitle is-6">Description: {{dog_item.description}}</p>
+                  <p class="subtitle is-6">$ {{dog_item.price}}</p>
+              </div>
+            </div>
+        </div>
+      </div> --}}
+
+    </div>
+    
   </main>
+
   <footer>
-      
   </footer>
 
   {{#if logged_in}}

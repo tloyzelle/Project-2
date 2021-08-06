@@ -1,13 +1,35 @@
-<section class="">
-    <img src="/public/images/{{dog_item.filename}}" alt="{{dog_item.description}}"> 
-    <div class="dogItem-title">
-        <p>Item: {{dog_item.title}}</p>
-    </div>
+{{!-- PREVIOUS CODE --}}
+    {{!-- <section class="">
+        <img src="/public/images/{{dog_item.filename}}" alt="{{dog_item.description}}"> 
+        <div class="dogItem-title">
+            <p>Item: {{dog_item.title}}</p>
+        </div>
 
-    <div class="dogItem-details">
-        <p>About: {{dog_item.description}}</p>
+        <div class="dogItem-details">
+            <p>About: {{dog_item.description}}</p>
+        </div>
+        <div class="dogItem-price">
+            <p>$ {{dog_item.price}}</p>
+        </div>
+    </section> --}}
+
+
+
+
+{{!-- Render Card Item --}}
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+        <img src="/public//images/{{dog_item.filename}}" alt="{{dog_item.description}}">
+        </figure>
     </div>
-    <div class="dogItem-price">
-        <p>$ {{dog_item.price}}</p>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content dogItem-details">
+                <p class="title is-4">Item: {{dog_item.title}}</p>
+                <p class="subtitle is-6">Description: {{dog_item.description}}</p>
+                <p class="subtitle is-6">$ {{dog_item.price}}</p>
+            </div>
+        </div>
     </div>
-</section>
+</div>
