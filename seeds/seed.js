@@ -13,9 +13,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await dog_item.bulkCreate(dogItemData);
+  await Dog_item.bulkCreate(dogItemData);
 
-  await cat_item.bulkCreate(catItemData);
+  await Cat_item.bulkCreate(catItemData);
 
   process.exit(0);
 };
