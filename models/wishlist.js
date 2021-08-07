@@ -23,20 +23,20 @@ Wishlist.init(
           type: DataTypes.INTEGER,
           allowNull: false
       },
-      catItem_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'cat_item',
-          key: 'id',
-        },
-      },
-      dogItem_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'dog_item',
-          key: 'id',
-        },
-      },
+      // catItem_id: {
+      //   type: DataTypes.INTEGER,
+      //   references: {
+      //     model: 'cat_item',
+      //     key: 'id',
+      //   },
+      // },
+      // dogItem_id: {
+      //   type: DataTypes.INTEGER,
+      //   references: {
+      //     model: 'dog_item',
+      //     key: 'id',
+      //   },
+      // },
     },
     {
       sequelize,
