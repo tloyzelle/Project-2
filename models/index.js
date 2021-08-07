@@ -3,6 +3,15 @@ const Dog_item = require('./Dog_item');
 const Cat_item = require ('./Cat_item');
 const Wishlist = require('./Wishlist');
 const ShoppingCart = require('./Shoppingcart');
+const Checkout = require('./Checkout');
+
+
+Dog_item.belongsToMany(ShoppingCart, { through: Checkout});
+ShoppingCart.belongsToMany(Dog_item, { through: Checkout})
+
+
+module.exports = { User, Dog_item, Cat_item, ShoppingCart, Wishlist, Checkout};
+
 
 // ShoppingCart.hasMany(Dog_item, {
 //     foreignKey: 'dogItem_id',
@@ -51,5 +60,3 @@ const ShoppingCart = require('./Shoppingcart');
 // Wishlist.belongsTo(User, {
 //     foreignKey: '',
 //   });
-
-module.exports = { User, Dog_item, Cat_item, ShoppingCart, Wishlist };
