@@ -40,7 +40,7 @@ router.get('/catitem', async (req, res) => {
 
     const catItems = catitemData.map((catitem) => catitem.get({ plain: true }));
 
-    res.render('catitems', {
+    res.render('catItems', {
       catItems,
       logged_in: req.session.logged_in,
     });
@@ -56,7 +56,7 @@ router.get('/catitem/:id', async (req, res) => {
     const catData = await Cat_item.findByPk(req.params.id);
 
     const catitem = catData.get({ plain: true });
-    res.render('catItems', { catitem, logged_in: req.session.logged_in });
+    res.render('cat', { catitem, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -88,7 +88,7 @@ router.get('/dogitem/:id', async (req, res) => {
     const dogData = await Dog_item.findByPk(req.params.id);
 
     const dogitem = dogData.get({ plain: true });
-    res.render('dogItems', { dogitem, logged_in: req.session.logged_in });
+    res.render('dog', { dogitem, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
