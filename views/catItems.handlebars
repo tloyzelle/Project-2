@@ -1,23 +1,8 @@
 
-
 {{!-- Render Card Item --}}
 {{#if logged_in}}
 <div class="card column is-one-fifth">
-    {{!-- <div class="card-image">
-        <figure class="image is-square">
-        <img src="/images/{{catitem.filename}}" alt="{{catitem.description}}">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content catItem-details">
-                <p class="title is-4">Item: {{catitem.title}}</p>
-                <p class="subtitle is-6">Description: {{catitem.description}}</p>
-                <p class="subtitle is-6">$ {{catitem.price}}</p>
-            </div>
-        </div>
-    </div> --}}
-    {{#each catItems as |cat_item}}
+    {{#each catItems as |cat_item|}}
     {{> catItem-details}}
     {{/each}}
 </div>
