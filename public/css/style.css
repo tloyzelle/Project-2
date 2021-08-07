@@ -5,3 +5,9 @@ body, html {
 .card-container {
     margin-top: 40px;
 }
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
