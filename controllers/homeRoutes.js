@@ -63,7 +63,7 @@ router.get('/catitem/:id', async (req, res) => {
   }
 });
 
-
+// get all dog items
 router.get('/dogitem', async (req, res) => {
   try {
     const dogitemData = await Dog_item.findAll({
