@@ -34,11 +34,11 @@
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item">
-              Products
+              Cat Products
             </a>
 
             <a class="navbar-item">
-              Product 2
+              Dog Products
             </a>
           </div>
 
@@ -50,8 +50,8 @@
                 </a>
                 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
-              <a href="/homepage">Homepage</a> |
-              <button class="no-button" id="logout">logout</button>
+              {{!-- <a href="/homepage">Homepage</a> | --}}
+              <button class="button is-light" id="logout">Logout</button>
               {{else}}
               <a class="button is-primary" href="/login"><strong>Login</strong> </a>
               {{/if}}
@@ -78,43 +78,8 @@
   <main class="container container-fluid">
     {{{ body }}}
 
-    {{!-- Render Column of Cards
+    {{!-- Render Column of Cards --}}
     <div class="columns card-container">
-      {{!-- Render One Card Item --}}
-      <div class="card column is-one-fifth">
-        <div class="card-image">
-            <figure class="image is-4by3">
-            <img src="/public//images/{{dog_item.filename}}" alt="{{dog_item.description}}">
-            </figure>
-        </div>
-        <div class="card-content">
-            <div class="media">
-              <div class="media-content dogItem-details">
-                  <p class="title is-4">Item: {{dog_item.title}}</p>
-                  <p class="subtitle is-6">Description: {{dog_item.description}}</p>
-                  <p class="subtitle is-6">$ {{dog_item.price}}</p>
-              </div>
-            </div>
-        </div>
-      </div> --}}
-
-      {{!-- CARD ITEM TWO EXAMPLE --}}
-      {{!-- <div class="card column is-one-fifth">
-        <div class="card-image">
-            <figure class="image is-4by3">
-            <img src="/public//images/{{dog_item.filename}}" alt="{{dog_item.description}}">
-            </figure>
-        </div>
-        <div class="card-content">
-            <div class="media">
-              <div class="media-content dogItem-details">
-                  <p class="title is-4">Item: {{dog_item.title}}</p>
-                  <p class="subtitle is-6">Description: {{dog_item.description}}</p>
-                  <p class="subtitle is-6">$ {{dog_item.price}}</p>
-              </div>
-            </div>
-        </div>
-      </div> --}}
 
     </div>
     
