@@ -32,6 +32,23 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//get all cat items
+router.get('/catitem', async (req, res) => {
+  try {
+    const catitemData = await Cat_item.findAll({
+  });
+
+    const catItems = catitemData.map((catitem) => catitem.get({ plain: true }));
+
+    res.render('catitems', {
+      catItems,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(catItems);
+  }
+});
 
 // GET one cat item
 router.get('/catitem/:id', async (req, res) => {
@@ -46,6 +63,24 @@ router.get('/catitem/:id', async (req, res) => {
   }
 });
 
+
+router.get('/dogitem', async (req, res) => {
+  try {
+    const dogitemData = await Dog_item.findAll({
+     
+    });
+
+    const dogItems = dogitemData.map((dogitem) => dogitem.get({ plain: true }));
+
+    res.render('dogItems', {
+      dogItems,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(dogItems);
+  }
+});
 
 // get one dog item
 router.get('/dogitem/:id', async (req, res) => {
