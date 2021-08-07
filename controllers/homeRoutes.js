@@ -46,6 +46,8 @@ router.get('/catitem/:id', async (req, res) => {
   }
 });
 
+
+// get one dog item
 router.get('/dogitem/:id', async (req, res) => {
   try {
     const dogData = await Dog_item.findByPk(req.params.id);
