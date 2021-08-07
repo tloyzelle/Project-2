@@ -1,3 +1,14 @@
-<figure class="image is-4by3">
-        <img src="/public//images/{{cat_item.filename}}" alt="{{cat_item.description}}">
-</figure>
+<div class="card-image">
+        <figure class="image is-square">
+        <img src="images/{{filename}}" alt="{{description}}">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content catItem-details">
+                <p class="title is-4">Item: {{title}}</p>
+                <p class="subtitle is-6">Description: {{description}}</p>
+                <p class="subtitle is-6">$ {{price}}</p>
+            </div>
+        </div>
+    </div>
