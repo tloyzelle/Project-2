@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Checkout extends Model {}
+class CatCheckout extends Model {}
 
-Checkout.init({
+CatCheckout.init({
     ShoppingcartId: {
         type: DataTypes.INTEGER,
         references: {
@@ -14,7 +14,7 @@ Checkout.init({
     dogId: {
         type: DataTypes.INTEGER,
         references: {
-            model:'dog_item',
+            model:'cat_item',
             key: 'id'
         },
     }
@@ -25,8 +25,8 @@ Checkout.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'checkout',
+    modelName: 'catcheckout',
   }
 );
 
-module.exports = Checkout;
+module.exports = CatCheckout;
