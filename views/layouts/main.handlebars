@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   {{!-- Link to CSS --}}
-  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -20,8 +20,8 @@
       {{!-- Nav Bar --}}
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="">
-            <img src="images/logo_1.jpg" width="auto" height="auto">
+          <a class="navbar-item" href="/">
+            <img src="/images/logo_1.jpg" width="auto" height="auto">
           </a>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -33,7 +33,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" href="/catitem/1">
               Cat Products
             </a>
 
@@ -89,7 +89,7 @@
   </footer>
 
   {{#if logged_in}}
-  <script src="./js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 
