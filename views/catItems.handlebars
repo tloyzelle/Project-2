@@ -3,7 +3,7 @@
 {{!-- Render Card Item --}}
 {{#if logged_in}}
 <div class="card column is-one-fifth">
-    <div class="card-image">
+    {{!-- <div class="card-image">
         <figure class="image is-square">
         <img src="/images/{{catitem.filename}}" alt="{{catitem.description}}">
         </figure>
@@ -16,7 +16,10 @@
                 <p class="subtitle is-6">$ {{catitem.price}}</p>
             </div>
         </div>
-    </div>
+    </div> --}}
+    {{#each catItems as |cat_item}}
+    {{> catItem-details}}
+    {{/each}}
 </div>
 {{else}}
 <a href="/login"> You must login first to view this page</a>
