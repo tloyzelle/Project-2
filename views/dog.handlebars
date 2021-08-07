@@ -1,14 +1,14 @@
 <div class="card-image">
      <figure class="image is-square">
-        <img src="images/{{filename}}" alt="{{description}}">
+        <img src="images/{{dogitem.filename}}" alt="{{dogitem.description}}">
         </figure>
     </div>
     <div class="card-content">
         <div class="media">
             <div class="media-content catItem-details">
-                <p class="title is-4">Item: {{title}}</p>
-                <p class="subtitle is-6">Description: {{description}}</p>
-                <p class="subtitle is-6">$ {{price}}</p>
+                <p class="title is-4">Item: {{dogitem.title}}</p>
+                <p class="subtitle is-6">Description: {{dogitem.description}}</p>
+                <p class="subtitle is-6">$ {{dogitem.price}}</p>
             </div>
             <button class="button is-light" id="Cart">Add to Cart</button>
         </div>
