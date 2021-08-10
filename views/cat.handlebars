@@ -1,15 +1,25 @@
-<div class="card-image">
-     <figure class="image is-square">
-        <img src="/images/{{catitem.filename}}" alt="{{catitem.description}}">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="media is-align-items-flex-end">
-            <div class="media-content catItem-details">
-                <p class="title is-4">Item: {{catitem.title}}</p>
-                <p class="subtitle is-6">Description: {{catitem.description}}</p>
-                <p class="subtitle is-6"><strong>$ {{catitem.price}}</strong></p>
+<div class="container">
+    <div class="columns is-centered">
+        <div class="column is-9-mobile is-5-widescreen is-7-desktop is-7-tablet">
+            <div class="card">
+                <div class="card-image">
+                <figure class="image is-square">
+                    <img src="/images/{{catitem.filename}}" alt="{{catitem.description}}">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media ">
+                        <div class="media-content catItem-details">
+                            <p class="title is-4">Item: {{catitem.title}}</p>
+                            <p class="subtitle is-6">Description: {{catitem.description}}</p>
+                        </div>            
+                    </div>
+                    <div class="">
+                        <p class="subtitle is-6"><strong>$ {{catitem.price}}</strong></p>
+                        <button class="button is-info" id="Cart">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <button class="button is-light" id="Cart">Add to Cart</button>
-        </div>
-      </div>
+        </div>    
+    </div>
+</div>

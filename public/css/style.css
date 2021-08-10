@@ -41,6 +41,10 @@ br {
     flex-direction: column;
 }
 
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
 /* Message Style */
 .message {
     margin-left: 4rem;
@@ -105,7 +109,7 @@ br {
 
 @media screen and (max-width: 768px) {
     .container {
-     margin-left: 8rem;
-     margin-right: 8rem;
+     margin-left: 2rem;
+     margin-right: 2rem;
     }
- }
+}
