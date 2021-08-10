@@ -1,11 +1,18 @@
 
 {{!-- Render Card Item --}}
 {{#if logged_in}}
-<div class="columns is-one-fifth">
+<div class="columns is-centered">
     {{#each catItems as |cat_item|}}
     {{> catItem-details}}
     {{/each}}
 </div>
 {{else}}
-<a href="/login"> You must login first to view this page</a>
+<article class="message">
+  <div class="message-header">
+    <p>Log In Please ❤️</p>
+  </div>
+  <div class="message-body has-text-centered">
+    <a href="/login"> <strong> You must login first to view this page </strong> </a>
+  </div>
+</article>
 {{/if}}

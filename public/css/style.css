@@ -1,7 +1,36 @@
+/* Body Style */
 body, html {
     font-family: 'Lato', sans-serif;
+    background-color: beige;
 }
 
+/* Break Style */
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 50%;
+}
+
+/* Hero Style */
+.hero {
+    background-image: url(/images/catanddoghero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    letter-spacing: .2rem;
+    font-size: 3rem;
+    color: #d9d9d9;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    color: #d9d9d9;
+}
+
+/* Card Style */
 .card-container {
     margin-top: 40px;
 }
@@ -10,4 +39,77 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Message Style */
+.message {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.message-header {
+    background-color: #EAFFEF;
+    color: rgb(66, 66, 66);
+}
+
+/* Form Style */
+.form-title {
+    font-weight: bold;
+    letter-spacing: .1rem
+}
+
+.box {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+/* Login In Box Style */
+#login-up-box {
+    background-color: #EAFFEF;
+}
+
+/* Sign Up Box Style */
+#sign-up-box {
+    background-color: #DDEBFB ;
+}
+
+
+/* Footer Style */
+.credits {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size:15px;
+    text-align: center;
+}
+
+#modal-text{
+    text-align: center;
+    padding: 10px 0;
+}
+
+#footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    margin-bottom: 80px;
+}
+
+/* Media */
+@media screen and (max-width: 1024px) {
+   .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+     margin-left: 2rem;
+     margin-right: 2rem;
+    }
+}

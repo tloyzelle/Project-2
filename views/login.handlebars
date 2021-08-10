@@ -1,43 +1,54 @@
-<div class="box">
+{{!-- Login Form --}}
+<div class="box" id="login-up-box">
+  <label class="form-title is-size-5">Login</label>
+    <form class="field control form login-form">  
+    <br>
+    <div class="control has-icons-left">
+      <input for="email-login" class="input" type="text" id="email-login" placeholder="Email">
+      <div class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </div>
+    </div>
+    <br>
+    <div class="control has-icons-left">
+      <input for="password-login" class="input" type="password" id="password-login" placeholder="Password">
+      <div class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </div>
+    </div>
+    <br>
+    <button class="button is-normal is-primary is-fullwidth" type="submit">Login</button>
+  </form>
+</div>
 
-  <div class="field">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="">
-        <label for="email-login">Email:</label>
-        <input class="" type="text" id="email-login" />
+{{!-- Sign Up Form --}}
+<div class="box" id="sign-up-box">
+  <label class="form-title is-size-5">Sign Up</label>
+    <form class="field form signup-form">  
+    <br>
+    <div class="control has-icons-left">
+      <input class="input" type="text" id="username-signup" placeholder="Username">
+      <div class="icon is-small is-left">
+        <i class="fas fa-user"></i>
       </div>
-      <div class="">
-        <label for="password-login">Password:</label>
-        <input class="" type="password" id="password-login" />
+    </div>
+    <br>
+    <div class="control has-icons-left">
+      <input class="input" type="email" id="email-signup" placeholder="Email">
+      <div class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
       </div>
-      <div class="">
-        <button class="button is-small is-info" type="submit">Login</button>
+    </div>
+    <br>
+    <div class="control has-icons-left">
+      <input class="input" type="password" id="password-signup" placeholder="Password">
+      <div class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
       </div>
-    </form>
-  </div>
-
-  <div class="field">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="">
-        <label for="username-signup">Username:</label>
-        <input class="" type="text" id="username-signup" />
-      </div>
-      <div class="">
-        <label for="email-signup">Email:</label>
-        <input class="" type="text" id="email-signup" />
-      </div>
-      <div class="">
-        <label for="password-signup">Password:</label>
-        <input class="" type="password" id="password-signup" />
-      </div>
-      <div class="">
-        <button class="button is-small is-info" type="submit">Signup</button>
-      </div>
-    </form>
-  </div>
-  
+    </div>
+    <br>
+    <button class="button is-normal is-info is-fullwidth" type="submit">Signup</button>
+  </form>
 </div>
 
 <script src="./js/login.js"></script>

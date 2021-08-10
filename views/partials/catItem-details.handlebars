@@ -1,20 +1,21 @@
-<div class="column">
+{{!-- Cat Item Card --}}
+<div class="column is-half-mobile is-2-widescreen is-3-desktop is-3-tablet ">
     <div class="card">
         <div class="card-image">
             <a href="/catitem/{{id}}">
-        <figure class="image is-square">
-        <img class="has-ratio" src="images/{{filename}}" alt="{{description}}">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content catItem-details">
-                <p class="title is-4">Item: {{title}}</p>
-                <p class="subtitle is-6">Description: {{description}}</p>
-                <p class="subtitle is-6">$ {{price}}</p>
-            </div>
+            <figure class="image is-square">
+            <img class="has-ratio" src="images/{{filename}}" alt="{{description}}">
+            </figure>
         </div>
-      </a>  
-    </div>
+        <div class="card-content">
+            <div class="media">
+                <div class="media-content catItem-details">
+                    <p class="title is-size-5">Item: {{title}}</p>
+                    <p class="subtitle is-size-7">Description: {{description}}</p>
+                    <p class="subtitle is-size-6"><strong>$ {{price}}</strong></p>
+                </div>
+            </div>
+            </a>  
+        </div>
     </div>
 </div>

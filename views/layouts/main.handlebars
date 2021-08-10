@@ -13,62 +13,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   {{!-- Link to CSS --}}
   <link type="text/css" rel="stylesheet" href="/css/style.css">
+  {{!-- Link to Font Awesome --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
+  {{!-- Nav Bar --}}
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logo_1.jpg" width="auto" height="auto">
+      </a>
+      {{!-- Hamburger Button on Collapse --}}
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    {{!-- Nav Bar First --}}
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item has-text-centered" href="/catitem"> Cat Products </a>
+        <a class="navbar-item has-text-centered" href="/dogitem"> Dog Products </a>
+      </div>
+
+      <div class="navbar-end">
+        <a class="navbar-item has-text-centered">
+          Shopping Cart
+        </a>
+        {{!-- Conditionally render login or logout links --}}
+        {{#if logged_in}}
+          <a class="navbar-item has-text-danger has-background-danger-light has-text-centered" href="/" id="logout"> <strong> Logout </strong> </a>
+        {{else}}
+          <a class="navbar-item has-text-primary has-background-primary-light has-text-centered" href="/login"> <strong> Login </strong> </a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+
   <header class="display-flex justify-space-between align-center p-2">
-      {{!-- Nav Bar --}}
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/images/logo_1.jpg" width="auto" height="auto">
-          </a>
-
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-          
-            <a class="navbar-item" href="/catitem">
-
-
-
-              Cat Products
-            </a>
-
-            <a class="navbar-item" href="/dogitem">
-              Dog Products
-            </a>
-          </div>
-
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-light">
-                  <strong>Shopping Cart</strong>
-                </a>
-                <!-- Conditionally render login or logout links -->
-              {{#if logged_in}}
-              {{!-- <a href="/homepage">Homepage</a> | --}}
-              <button class="button is-light" id="logout">Logout</button>
-              {{else}}
-              <a class="button is-primary" href="/login"><strong>Login</strong> </a>
-              {{/if}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
     {{!-- Hero Image --}}
-    <section class="hero is-info is-medium">
-      <div class="hero-body">
-        <p class="title has-text-centered">
+    <section class="hero is-info is-medium has-bg-img">
+      <div class="hero-body has-bg-img">
+        <p class="title hero-title has-text-centered">
           Cooper and Dan's Toybox
         </p>
         <p class="subtitle has-text-centered">
@@ -76,25 +64,37 @@
         </p>
       </div>
     </section>
-
   </header>
-      
+
+  {{!-- Main Body --}}
   <main class="container container-fluid">
+    
+    
     {{{ body }}}
 
-    {{!-- Render Column of Cards --}}
-    <div class="columns card-container">
 
-    </div>
-    
   </main>
 
-  <footer>
+  {{!-- Footer --}}
+  <footer class="credits" id="footer">
+    <br>
+    <p> &#169; 2021 </p>
+    <p>Cooper and Dan's Toybox</p>
+    <p>Thank you for your support! ❤️</p>
   </footer>
-
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+    
+  {{!-- Scripts --}}
+  {{!-- Link to JQuery Library  --}}
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  {{!-- Link to Custom Javascript --}}
+    <script src="/js/script.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
