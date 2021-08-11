@@ -27,12 +27,10 @@ An open marketplace to buy and sell items for your furry friends.
 To Create the Schema, run the following syntax in MySQL Workbench:
 
   ![CreateSchema](public/images/workbenchschema.PNG)
-  
-Walkthrough
 
-  ![Walkthroughvideo]()
-
+To start the app in the CLI : "npm start"
   
+
   ## License
     
     This application is licensed under the MIT license.
@@ -47,4 +45,5 @@ Walkthrough
 
   If you have any questions about the repo or application, open an issue or contact me directly at sample. More of my work can be found at [My Github](https://github.com/brob92993).
 
-  [Marketplace Repository](https://github.com/tloyzelle/Project-2.git)
+  [Cooper & Dan's Topybox Repository](https://github.com/tloyzelle/Project-2.git)
+  [Deployed heroku application](https://cooper-and-dans-toybox.herokuapp.com/)
