@@ -1,8 +1,8 @@
 const User = require('./User');
-const Dog_item = require('./Dog_item');
-const Cat_item = require ('./Cat_item');
-const Wishlist = require('./Wishlist');
-const ShoppingCart = require('./Shoppingcart');
+const Dog_item = require('./dog_item');
+const Cat_item = require ('./cat_item');
+const Wishlist = require('./wishlist');
+const ShoppingCart = require('./shoppingcart');
 const DogCheckout = require('./DogCheckout');
 const DogWish = require('./DogWish');
 const CatCheckout = require('./CatCheckout');
